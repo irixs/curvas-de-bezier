@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Gerador de Curvas Bonitas</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Gerador de Curvas Bonitas</h1>
+  <div>
+	  <canvas id="myCanvas" width="1300" height="650"></canvas>
+  </div>
+  <div> 
+    <input class="button" type="button" id="novaCurva" onclick="novaCurva()" value="Nova Curva"></button>
+    <input class="button" type="button" id="deletarCurva" onclick="deletarCurva()" value="Deletar Curva"></button>
+    <input class="button" type="button" id="curvaAnterior" onclick="curvaAnterior()" value="Curva Anterior"></button>
+    <input class="button" type="button" id="proximaCurva" onclick="proximaCurva()" value="Próxima Curva"></button>
+    <input class="button" type="button" id="moverPonto" onclick="moverPonto()" value="Mover Ponto"></button>
+  </div>
+  <div>
+    <input class="numberbox" type="number" id="avaliacoesCurva" min="0" value="200">
+    <input class="button" type="button" id="mudarAvaliacao" onclick="mudarAvaliacao()" value="Mudar Avaliação"></button>
+  </div>
+  <div class="checkboxes">
+    <input type="checkbox" id="pontosControle" onclick="pontosControleValue()" checked> Pontos de Controle
+    <input type="checkbox" id="poligonaisControle" onclick="poligonaisControleValue()" checked> Poligonais de controle
+    <input type="checkbox" id="exibirCurva" onclick="exibirCurvasValue()" checked> Curvas
+  </div>
+	<script src="script.js">
+	</script>
+</body>
+
+</html>
+
