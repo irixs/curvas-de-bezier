@@ -21,17 +21,13 @@ function click() {
   if (event.which == 1 && !moverSelecionado) {
     let x = event.clientX - rect.left;
     let y = event.clientY - rect.top;
-    //console.log("x: " + x + " y: " + y);
     pontos.push({ x: x, y: y });
     curvas[quant] = pontos;
     jera();
   } else if (event.which == 1 && moverSelecionado) {
-    console.log("entrou aqui")
     let x = event.clientX - rect.left;
     let y = event.clientY - rect.top;
     let indice = estaNoCirculo(({ x: x, y: y }));
-    console.log(noCirculo);
-    console.log(indice);
     if (noCirculo) {
       canvas.addEventListener("mouseup", onMouseUp = (event) => {
         canvas.removeEventListener('mouseup', onMouseUp);
@@ -244,12 +240,4 @@ function exibirCurvasValue() {
     exibirCurva = 1;
   }
   jera();
-}
-
-function editCurve() {
-  moverSelecionado = true;
-  canvas.addEventListener("mousedown", movePoint = (event) => {
-    
-  });
-  noCirculo = false;
 }
